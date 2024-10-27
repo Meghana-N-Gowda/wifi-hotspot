@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start Hotspot</title>
+</head>
+<body>
+    <h1>Start Hotspot</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="ssid">SSID:</label>
+        <input type="text" id="ssid" name="ssid" required><br><br>
+        <label for="key">Key:</label>
+        <input type="password" id="key" name="key" required><br><br>
+        <button type="submit">Start Hotspot</button>
+    </form>
+    <br>
+    <a href="{% url 'show_hotspot_status' %}">Show Hotspot Status</a>
+    <br>
+    <a href="{% url 'stop_hotspot' %}">Stop Hotspot</a>
+</body>
+</html>
